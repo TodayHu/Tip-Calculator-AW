@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Tip Calculator AW WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Tip Calculator AW.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>1DCD46871A6B48A000673FCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DCD469B1A6B49AC00673FCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DCD46A51A6B49AC00673FCD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tip_Calculator_AW_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Cost of Meal" id="Jpm-zU-dgo"/>
+                        <label width="1" alignment="left" text="$30.00" textAlignment="center" id="N4O-Jb-edC"/>
+                        <slider width="1" height="21" alignment="left" continuous="YES" value="30" minimum="10" maximum="100" steps="180" id="Wlg-4A-ZKI">
+                            <connections>
+                                <action selector="sliderAdjusted:" destination="AgC-eL-Hgc" id="sTT-j1-bf8"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="Hj9-RD-ndS"/>
+                        <label alignment="left" text="Tip" id="rNw-wv-MQL"/>
+                        <group width="1" height="32" alignment="left" id="Kmo-fB-C7x">
+                            <items>
+                                <button width="0.33333000000000002" height="1" alignment="left" title="10%" id="I64-eh-vlK">
+                                    <connections>
+                                        <action selector="tenTapped" destination="AgC-eL-Hgc" id="fWC-Lj-Dh4"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33329999999999999" height="1" alignment="left" title="15%" id="fA6-Kb-khn">
+                                    <connections>
+                                        <action selector="fifteenTapped" destination="AgC-eL-Hgc" id="0Zs-OJ-Cfl"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33333000000000002" height="1" alignment="left" title="20%" id="Tor-ZV-kZW">
+                                    <connections>
+                                        <action selector="twentyTapped" destination="AgC-eL-Hgc" id="H8p-fA-yGR"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="mealCostLabel" destination="N4O-Jb-edC" id="Wil-id-q6I"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="199" y="444"/>
+        </scene>
+        <!--resultsController-->
+        <scene sceneID="ChA-mT-3tJ">
+            <objects>
+                <controller identifier="resultsController" id="Tzs-SU-PVo" customClass="ResultsController" customModule="Tip_Calculator_AW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Cost of Meal:" textAlignment="left" id="jQw-t0-Ae5">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label width="1" alignment="left" text="$25" textAlignment="right" id="Je2-ZZ-OaM">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="20% tip:" id="ATw-Fn-jTQ">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label width="1" alignment="left" text="$5" textAlignment="right" id="Joi-xE-5fg">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Total:" id="tUv-Hu-PPM">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label width="1" alignment="left" text="$30" textAlignment="right" id="1j7-Cg-1zG">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                    <color key="backgroundColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="mealCostLabel" destination="Je2-ZZ-OaM" id="jfS-5T-WPr"/>
+                        <outlet property="tipAmountLabel" destination="Joi-xE-5fg" id="qPJ-4e-mbS"/>
+                        <outlet property="tipPercentageLable" destination="ATw-Fn-jTQ" id="0s0-1y-vY2"/>
+                        <outlet property="totalLabel" destination="1j7-Cg-1zG" id="JKB-Y0-d3T"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="448"/>
+        </scene>
+    </scenes>
+</document>
